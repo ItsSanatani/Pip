@@ -2,7 +2,7 @@ import asyncio
 import logging
 from aiogram import Bot, Dispatcher
 from config import BOT_TOKEN
-from handlers import start, session, report
+from handlers import start, session, report, linkreport
 
 logging.basicConfig(level=logging.INFO)
 
@@ -12,6 +12,7 @@ dp = Dispatcher()
 dp.include_router(start.router)
 dp.include_router(session.router)
 dp.include_router(report.router)
+dp.include_router(linkreport.router)
 
 async def main():
     print("🚀 Telegram Mass Reporting Bot Started!")
