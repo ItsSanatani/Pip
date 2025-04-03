@@ -7,7 +7,7 @@ router = Router()
 @router.message(Command("start"))
 async def start_command(message: Message):
     await message.reply(
-        "🚀 *Telegram Mass Reporting Bot Running\\!* \n"
-        "Use `/addsession session_string` to add accounts.",
-        parse_mode="MarkdownV2"
+        "🚀 <b>Telegram Mass Reporting Bot Running!</b>\n"
+        "Use <code>/addsession session_string</code> to add accounts.",
+        parse_mode="HTML"
     )
